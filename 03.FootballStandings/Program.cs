@@ -76,22 +76,6 @@
             MatchesArchive[teamB].Points += teamBPoints;
         }
 
-        private static string BuildRegex(string pattern)
-        {
-            pattern = Regex.Escape(pattern);
-            var res = @".*?(" + pattern + @")(.*?)\1.*?\1(.*?)\1[^\d]*(\d+)\:(\d+)";
-
-            return res;
-        }
-
-        private static string BuildRegex2(string pattern)
-        {
-            pattern = Regex.Escape(pattern);
-            var res = @".*?(" + pattern + @")(.*?)\1(.*?)\1[^\d]*(\d+)\:(\d+)";
-
-            return res;
-        }
-
         private static string FormatTeamName(string name)
         {
             var res = new string(name.Trim().Reverse().ToArray()).ToUpper();
