@@ -106,7 +106,7 @@
         }
     }
 
-    internal class DataEntry
+    internal struct DataEntry
     {
         public long Goals { get; set; }
 
